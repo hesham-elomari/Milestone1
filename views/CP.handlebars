@@ -1,0 +1,56 @@
+<script>
+
+function saveF(){
+    $.ajax({
+        url: "http://localhost:3000/CP/links",
+        type: "POST",
+        data: {SaveDB: 'yes'}, 
+        success: function(returned) {
+             console.log(returnet); 
+        },
+        error: function() {
+-
+        }
+    });
+}
+</script>
+
+
+
+
+<h3>Create Portofolio</h3>
+<body>
+<form method="post"  enctype="multipart/form-data" >
+
+<p>
+    <label>Name</label>
+    <input type="text" class="form-control" name="name1" placeholder="Name">
+</p>
+<br>
+<br>
+
+<p>
+      <label>Upload</label>
+      <input type="file" name="IM"/><br>
+      <input type="submit" name="save1" value="Save1" />
+      
+</p>
+<br>
+<br>
+
+<p><b>
+Choose either links or upload a picture</b>
+<p>
+<br>
+<br>      
+    <label>Links</label>
+    <input type="text" class="form-control" name="link" placeholder="Link"><br>
+    <button name="btnimg" value="SaveDB" onclick="saveF()">Save2</button>
+</p>
+    
+       
+
+</form>
+
+</body>
+
